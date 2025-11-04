@@ -1,12 +1,7 @@
-import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from utils import load
 from sys import argv
-
-def load(path: str):
-    data = pd.read_csv(path)
-    size = data.shape
-    return data
 
 
 def mean(ave: list):
@@ -77,7 +72,7 @@ def main():
         km = data['km']
         price = data['price']
         #value = input("Entrez une valeur : ")
-        #estimate_price(value, km)
+        #estimate_price(150000, km)
         linear_regression(km, price, file)
         plt.scatter(tuple(km), tuple(price))
         plt.xlabel('km')
